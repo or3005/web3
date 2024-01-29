@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Tailwind</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body class="dark:bg-slate-800">
+    <div class="max-w-[1000px] mx-auto h-[100vh] flex flex-col gap-2 p-2">
+        <div class="p-4 bg-slate-200 flex justify-between relative">
+            <div class="sm:flex justify-start gap-4 hidden">
+              <a href="#" class="font-bold hover:underline text-2xl">Home</a>
+              <a href="#" class="font-bold hover:underline text-2xl">Projects</a>
+              <a href="#" class="font-bold hover:underline text-2xl">About</a>
+            </div>
+            <button class="border border-slate-700 rounded py-1 px-3 block sm:hidden" id="btnMenu">menu</button>
+            <div class="justify-start gap-4 sm:hidden absolute bg-slate-300 
+            left-0 right-0 top-[70px] p-4 pb-8 hidden" id="popupMenu">
+              <a href="#" class="font-bold hover:underline text-2xl block">Home</a>
+              <a href="#" class="font-bold hover:underline text-2xl block">Projects</a>
+              <a href="#" class="font-bold hover:underline text-2xl block">About</a>
+            </div>
+            <button id="btnTheme" class="border border-slate-700 rounded py-1 px-3">dark</button>
+        </div>
+        <div class="p-4 grow border border-slate-600" id="content">
+            <h1 class="text-4xl font-bold">Home</h1>
+            <p class="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            
+            </p>
+        </div>
+        <div class="p-4 text-center bg-slate-200">footer</div>
+    </div>
+    <script type="module" src="/main.js"></script>
+    <script>
+      // custom config for the MTW app 
+      const mtwAppConfig = {
+          border: true // app border in the MTW page                    
+      }
+
+      ///////////////////////////////////////////////////////
+      // implement this functions in order to use private API        
+      const sendPrivateApiRequest = async () => {
+          // your code here:
+          // sendRequestToParent({ cat: 'getAssets' })
+      }        
+
+      const acceptPrivateApiResponse = async (data) => {
+          // process received data here:
+          // console.log(data)
+      }
+
+      // use this in order to send on document load
+      document.addEventListener('DOMContentLoaded', () => {
+          // your code here:
+          //sendRequestToParent({ method: 'getAssets' })
+      })
+
+  </script>
+  <script src="https://morethanwallet.com/appstore/index.js"></script>
+</body>
+</html>
+
